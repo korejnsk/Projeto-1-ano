@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Mapa do Tesouro - 1 Ano</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nosso Mapa do Tesouro</h1>
+            <div class="music-player">
+                <div class="player-controls">
+                    <button id="prevBtn" class="control-btn"><i class="fas fa-step-backward"></i></button>
+                    <button id="playPauseBtn" class="control-btn"><i class="fas fa-play"></i></button>
+                    <button id="nextBtn" class="control-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="progress-container">
+                    <div class="time-info">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="volume-control">
+                    <i class="fas fa-volume-up"></i>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                </div>
+                <div class="song-info">
+                    <span id="currentSong">Nenhuma música selecionada</span>
+                </div>
+            </div>
+            <div class="timer">
+                <div class="timer-item">
+                    <span id="days">00</span>
+                    <span>Dias</span>
+                </div>
+                <div class="timer-item">
+                    <span id="hours">00</span>
+                    <span>Horas</span>
+                </div>
+                <div class="timer-item">
+                    <span id="minutes">00</span>
+                    <span>Minutos</span>
+                </div>
+                <div class="timer-item">
+                    <span id="seconds">00</span>
+                    <span>Segundos</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="treasure-map">
+            <div class="map-container">
+                <div class="map-background">
+                    <div class="map-grid"></div>
+                    <div class="map-elements">
+                        <div class="map-start">🏁</div>
+                        <div class="map-path"></div>
+                        <div class="map-checkpoints">
+                            <button class="checkpoint-btn" data-checkpoint="1">
+                                <span class="checkpoint-icon">❓</span>
+                                <span class="checkpoint-label">Primeiro Encontro</span>
+                            </button>
+                            <button class="checkpoint-btn" data-checkpoint="2">
+                                <span class="checkpoint-icon">❓</span>
+                                <span class="checkpoint-label">Primeiro Beijo</span>
+                            </button>
+                            <button class="checkpoint-btn" data-checkpoint="3">
+                                <span class="checkpoint-icon">❓</span>
+                                <span class="checkpoint-label">Natal e Ano Novo</span>
+                            </button>
+                            <button class="checkpoint-btn" data-checkpoint="4">
+                                <span class="checkpoint-icon">❓</span>
+                                <span class="checkpoint-label">Os dias de Hoje</span>
+                            </button>
+                        </div>
+                        <div class="map-treasure">
+                            <button class="treasure-btn">
+                                <span class="treasure-icon">🔒</span>
+                                <span class="treasure-label">O Tesouro</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkpoint-content" id="checkpoint-1">
+            <div class="content-wrapper">
+                <h3>Nosso Primeiro Encontro</h3>
+                <div class="photo-container">
+                    <img src="assets/encontro.jpg" alt="Nosso primeiro encontro">
+                </div>
+                <p class="date">Fevereiro de 2024</p>
+                <p class="description">O dia que minha vida inteira mudou pra melhor.</p>
+                <button class="close-btn">✖</button>
+            </div>
+        </div>
+
+        <div class="checkpoint-content" id="checkpoint-2">
+            <div class="content-wrapper">
+                <h3>Primeiro Beijo</h3>
+                <div class="photo-container">
+                    <img src="assets/primeiro.jpg" alt="Nosso primeiro beijo">
+                </div>
+                <p class="date">Fevereiro de 2024</p>
+                <p class="description">O dia que eu tava com vergonha demais de te beijar e acabei beijando no uber.</p>
+                <button class="close-btn">✖</button>
+            </div>
+        </div>
+
+        <div class="checkpoint-content" id="checkpoint-3">
+            <div class="content-wrapper">
+                <h3>Natal e Ano Novo</h3>
+                <div class="photo-container">
+                    <img src="assets/natal.jpg" alt="Natal e Ano Novo">
+                </div>
+                <p class="date">Dezembro de 2024</p>
+                <p class="description">Nosso primeiro natal juntos, espero que seja o primeiro de muitos.</p>
+                <button class="close-btn">✖</button>
+            </div>
+        </div>
+
+        <div class="checkpoint-content" id="checkpoint-4">
+            <div class="content-wrapper">
+                <h3>Meu Momento Favorito Desse Ano</h3>
+                <div class="photo-container">
+                    <img src="assets/babi.jpg" alt="Nossos momentos especiais">
+                </div>
+                <p class="date">Todos os dias</p>
+                <p class="description">O dia que senti o que é uma família, e essa família é você.</p>
+                <button class="close-btn">✖</button>
+            </div>
+        </div>
+
+        <div class="treasure-content">
+            <div class="content-wrapper">
+                <button class="close-btn">×</button>
+                <h2>Você</h2>
+                <p>Você é meu tesouro, o mais valioso do universo. Eu não poderia pedir por algo tão valioso quanto seus sentimentos e seu carinho por mim. Você sempre cuidou de mim e se preocupou comigo acima de muita coisa e desde o primeiro momento com você eu percebi que seria pro resto da minha vida. Não existem palavras pra mostrar minha gratidão por você estar do meu lado por tanto tempo, entrei nesse relacionamento visando passar a minha vida inteira com você e é o que planejo. Não importa o que você diga, meus sentimentos por você são gigantes e não tem como explicar ou dimensionar tudo que sinto, nunca vou abandonar você do mesmo jeito que você não me abandonou e não vai. Sou o homem mais feliz do mundo por ter você exatamente desse jeito, minha protetora acima de tudo. Nunca tive alguém nem na minha família que se importava com as coisas que gosto e faço, você sempre presta atenção em cada detalhe do que faço ou falo e isso é algo que valorizo com todas as minhas forças e nunca vou esquecer, obrigado por ser tão incrível. Sem contar os milhões de conselhos que me deu e fez com que eu melhorasse muito como pessoa mas ainda estou muito longe do ideal para nós dois. Você me da vontade de viver. Vontade de levantar todos os dias e tentar mudar a minha vida para melhor. Vontade de fazer tudo certo e te conquistar cada vez mais todos os dias. Eu te amo muito e te agradeço por ser essa pessoa maravilhosa que me guia e ilumina todo meu caminho. Sempre digo que não me vejo no futuro mas quando penso em você, me vejo no seu futuro e estou lutando internamente e externamente por isso. Eu vou passar o resto da minha vida com você (isso é uma ameaça) e não tem nada no mundo que me impeça de tornar isso realidade.</p>
+                <p>Eu te amo muito, você é o meu tesouro. Feliz 1 ano. O primeiro de todos os outros.</p>
+                <div class="photo-container">
+                    <img src="assets/img17.jpg" alt="O Meu tesouro">
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-gallery">
+            <h2>Nossos Momentos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-photo="1">
+                    <img src="assets/gallery/img1.jpg" alt="Momento Especial 1">
+                </div>
+                <div class="gallery-item" data-photo="2">
+                    <img src="assets/gallery/img2.jpg" alt="Momento Especial 2">
+                </div>
+                <div class="gallery-item" data-photo="3">
+                    <img src="assets/gallery/img3.jpg" alt="Momento Especial 3">
+                </div>
+                <div class="gallery-item" data-photo="4">
+                    <img src="assets/gallery/img4.jpg" alt="Momento Especial 4">
+                </div>
+                <div class="gallery-item" data-photo="5">
+                    <img src="assets/gallery/img5.jpg" alt="Momento Especial 5">
+                </div>
+                <div class="gallery-item" data-photo="6">
+                    <img src="assets/gallery/img6.jpg" alt="Momento Especial 6">
+                </div>
+                <div class="gallery-item" data-photo="7">
+                    <img src="assets/gallery/img7.jpg" alt="Momento Especial 7">
+                </div>
+                <div class="gallery-item" data-photo="8">
+                    <img src="assets/gallery/img8.jpg" alt="Momento Especial 8">
+                </div>
+                <div class="gallery-item" data-photo="9">
+                    <img src="assets/gallery/img9.jpg" alt="Momento Especial 9">
+                </div>
+                <div class="gallery-item" data-photo="9">
+                    <img src="assets/gallery/img10.jpg" alt="Momento Especial 9">
+                </div>
+                <div class="gallery-item" data-photo="9">
+                    <img src="assets/gallery/img11.jpg" alt="Momento Especial 9">
+                </div>
+                <div class="gallery-item" data-photo="9">
+                    <img src="assets/gallery/img12.jpg" alt="Momento Especial 9">
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-viewer">
+            <div class="viewer-content">
+                <button class="close-btn">✖</button>
+                <img src="" alt="Foto em tamanho maior">
+                <div class="viewer-controls">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
